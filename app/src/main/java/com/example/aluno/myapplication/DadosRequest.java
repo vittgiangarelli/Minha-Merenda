@@ -9,6 +9,11 @@ import feign.RequestLine;
 
 public interface DadosRequest{
 
+    @RequestLine("POST /posts")
+    void createDados(Dados dados);
+
     @RequestLine("GET /posts/{id}/")
     Dados getDados(@Param("id") Integer id);
+
+
 }
