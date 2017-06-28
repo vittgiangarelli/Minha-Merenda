@@ -43,4 +43,11 @@
         android:id="@+id/btnNgostei"
         android:background="@drawable/btnodiei_clicavel"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não sei, não comi"
+        android:id="@+id/btn_naoComi"
+        android:background="@drawable/btn_naocomi_clicavel"/>
+
 </LinearLayout>
