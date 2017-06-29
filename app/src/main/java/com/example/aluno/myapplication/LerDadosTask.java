@@ -1,6 +1,7 @@
 package com.example.aluno.myapplication;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import feign.Feign;
 import feign.gson.GsonDecoder;
@@ -17,9 +18,11 @@ public class LerDadosTask extends AsyncTask<String, Void, Dados> {
         try {
 
             DadosRequest request = Feign.builder()
-                    .decoder(new GsonDecoder()).target(DadosRequest.class, "http://jsonplaceholder.typicode.com");
+                    .decoder(new GsonDecoder()).target(DadosRequest.class, "http://jsonplaceholder.typicode.com/posts/vittorio");
 
             Dados dadosrecuperados = request.getDados(params[0]);
+
+            Log.i("Log", dadosrecuperados.toString());
 
             return dadosrecuperados;
         } catch (Exception e) {

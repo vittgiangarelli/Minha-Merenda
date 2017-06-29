@@ -50,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         // Usando a Task para recuperar a postagem da API REST pela internet
         Dados dados = task.doInBackground(String.valueOf(ra.getText().toString()));
 
-        // usando os valores recuperados nos componentes de tela
+        /*/ usando os valores recuperados nos componentes de tela
         if (dados.ra == ra.getText().toString())
             erro.setText("Você já avaliou a merenda de hoje!");
+        */
     }
 }

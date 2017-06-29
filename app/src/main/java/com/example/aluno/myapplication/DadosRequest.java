@@ -13,7 +13,7 @@ public interface DadosRequest{
     void createDados(Dados dados);
 
     @RequestLine("GET /posts/{id}/")
-    Dados getDados(@Param("id") Integer id);
+    Dados getDados(@Param("id") String id);
 
 
 }

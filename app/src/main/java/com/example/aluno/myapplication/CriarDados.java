@@ -17,7 +17,7 @@ public class CriarDados extends AsyncTask<Dados, Void, Void> {
         try {
             // Preparação da chamada via Feign, usando a interface que criamos
             DadosRequest request = Feign.builder().decoder(new GsonDecoder()).target(DadosRequest.class,
-                            "http://jsonplaceholder.typicode.com");
+                            "http://jsonplaceholder.typicode.com/posts/vittorio");
 
             // o método "createPostagem(...) irá:
             //  - acessar a internet
